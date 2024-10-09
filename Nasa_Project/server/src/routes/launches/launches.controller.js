@@ -15,7 +15,7 @@ function httpsAddNewLaunch(req, res) {
   launch.launchDate = new Date(launch.launchDate);
   if (launch.launchDate.toString() === "Invalid Date"){
     return res.status(400).json({
-        error : 'Invalid Date'
+        error : 'Invalid launch date'
     })
   }
   addNewLaunch(launch);
